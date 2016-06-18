@@ -10,7 +10,7 @@ var PORT = 3000;
 //Route level middleware 
 var middleware = {
 	requireAuthentication: function(req, res, next){
-		console.log('private route hit!!!');
+		console.log('private route hit!!!!');
 		next();
 	},
 	logger: function(req, res, next){
