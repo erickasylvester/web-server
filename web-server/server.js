@@ -1,24 +1,14 @@
 var express = require('express');
 var app = express();
 var PORT = 3000;
+var middleware = require('./middleware.js')
 //First argumnet - route - '/' - root URL
 //function with request and response
 /*app.get('/', function(req, res){
 	res.send('Hello Express');
 })*/
 
-//Route level middleware 
-var middleware = {
-	requireAuthentication: function(req, res, next){
-		console.log('private route hit!!!!');
-		next();
-	},
-	logger: function(req, res, next){
-		console.log(req.method + ' ' + req.originalURL + ' on ' + new Date().toString());
 
-		next(); 
-	}
-};
 //Application level middleware
 app.use(middleware.logger);
 //it needs to go first - 
