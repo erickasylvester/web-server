@@ -11,7 +11,7 @@ module.exports = function(location){
 		//callback('Here is the current weather');
 		//encode string
 		//for example - replace spaces with encoded string
-		encodeURIComponent(location);
+		location = encodeURIComponent(location);
 		//var url = 'http://api.openweathermap.org/data/2.5/weather?appid=cdad7a965a8619dbf6b4dec12253b828&q=%20+%20newyork%20+%20&units=imperial';
 
 		var url = 'http://api.openweathermap.org/data/2.5/weather?appid=cdad7a965a8619dbf6b4dec12253b828&q=' + location + '&units=imperial';
