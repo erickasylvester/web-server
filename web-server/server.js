@@ -1,6 +1,8 @@
+//web application server framework
 var express = require('express');
 var app = express();
-var PORT = 3000;
+//process.env.PORT is a heroku variable
+var PORT = process.env.PORT || 3000;
 var middleware = require('./middleware.js')
 //First argumnet - route - '/' - root URL
 //function with request and response
